@@ -4,28 +4,35 @@ import "./categories.scss"
 function App() {
   const categorie=[
     {
-      title: "Hats"
+      title: "Hats",
+      imageUrl:'https://i.ibb.co/cvpntL1/hats.png',
+    },
+
+    {
+      title: "Jackets",
+      imageUrl:'https://i.ibb.co/px2tCc3/jackets.png',
     },
     {
-      title: "Jackets"
+      title: "Sneakers",
+      imageUrl:'https://i.ibb.co/0jqHpnp/sneakers.png',
     },
     {
-      title: "Sneakers"
+      title: "Womens",
+      imageUrl:'https://i.ibb.co/GCCdy8t/womens.png',
     },
     {
-      title: "Womens"
-    },
-    {
-      title: "Mens"
+      title: "Mens",
+      imageUrl:'https://i.ibb.co/R70vBrQ/mens.png',
     }
   ]
   return (
     <div className="App">
       <div className='categories'>
-     {categorie.map((categor)=>(
-        <div className='category-container'>
+     {categorie.map(({title,imageUrl})=>(
+        <div className='category-container' style={{backgroundImage :`url(${imageUrl})`}}>
+         
 <div className='category-body'>
-  <h2>{categor.title}</h2>
+  <h2>{title}</h2>
   <p>Shop Now</p>
 </div>
         </div>
